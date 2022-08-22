@@ -1,0 +1,56 @@
+name: PortableInventory
+main: portableinventory.PortableInventory
+version: 1.0.0
+api-version: 1.19
+commands:
+    pitest:
+        description: A test command used during development.
+        usage: /pitest
+        permission: portableinventory.test
+        permission-message: 
+    picreate:
+        description: Create a stockpile.
+        usage: /picreate <stockpile name> <password>
+        permission: portableinventory.default
+        permission-message: 
+    pilist:
+        description: List the stockpiles that you own or have access to.
+        usage: /pilist
+        permission: portableinventory.default
+        permission-message: 
+    piswitch:
+        description: Switch to a certain stockpile, which is necessary before using that stockpile.
+        usage: /piswitch <stockpile name>
+        permission: portableinventory.default
+        permission-message:
+    piconnect:
+        description: Connect to a stockpile created by another player.
+        usage: /piconnect <stockpile name> <password>
+        permission: portableinventory.default
+        permission-message:
+    piremove:
+        description: Remove a stockpile that belongs to you.
+        usage: /piremove <estockpile name> <password>
+        permission: portableinventory.default
+        permission-message:
+    pisave:
+        description: Submit items to the stockpile you are using via the virtual inventory.
+        usage: /pisave
+        permission: portableinventory.default
+        permission-message:
+    pitake:
+        description: Take items from the stockpile you are using. You can left click / shift left click / right click.
+        usage: /pitake
+        permission: portableinventory.default
+        permission-message:
+    pisaveall:
+        description: Submit all items in your inventory to the stockpile you are using.
+        usage: /pisaveall
+        permisssion: portableinventory.default
+        permission-message:
+    pidisconnect:
+        description: Disconnect from a stockpile that you have access to.
+        usage: /pidisconnect <stockpile name>
+        permission: portableinventory.default
+        permission-message:
+        
