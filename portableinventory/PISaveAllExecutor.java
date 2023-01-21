@@ -30,7 +30,7 @@ public class PISaveAllExecutor implements CommandExecutor{
             allItems.add(item);
         }
         PIData.saveItems(playerName, allItems);
-        player.getInventory().clear();
+        player.getInventory().setStorageContents(new ItemStack[0]);
         sender.sendMessage("All items saved!");
         return true;
     }
