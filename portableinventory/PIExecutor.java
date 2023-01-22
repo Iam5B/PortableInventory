@@ -16,26 +16,22 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
 /**
  *
  * @author User
  */
-public class PITakeExecutor implements CommandExecutor{
+public class PIExecutor implements CommandExecutor{
     private final PortableInventory plugin;
-    
     public static HashMap<String, Integer> playerPage;
     // 该静态变量用于记录玩家所在页数，主要用于支持连续多次翻页操作
     public static HashSet<String> playerUsed;
-    // 该静态变量用于记录玩家是否输入过指令，也可以理解为玩家是否正在使用pitake所对应的操作界面
+    // 该静态变量用于记录玩家是否输入过指令，也可以理解为玩家是否正在使用pi所对应的操作界面
     public static HashMap<String, Integer> playerWishIndex;
     // 该变量用于记录玩家所期望的物品的下标，用于配合物品数量进行指定数量的取操作
     public static HashSet<String> playerWish;
     // 该变量用于记录玩家是否即将进行指定数量的取操作
     
-    // 似乎应该将上述变量的操作变成方法，但是图快就算了
-    
-    public PITakeExecutor(PortableInventory plugin) {
+    public PIExecutor(PortableInventory plugin) {
         this.plugin = plugin; // Store the plugin in situations where you need it.
     }
 
@@ -47,7 +43,7 @@ public class PITakeExecutor implements CommandExecutor{
             return false;
         }
         Inventory inv = Bukkit.createInventory(null, 45, "Select item to take away");
-        PITakeExecutor.resetPlayerPage(playerName, false);
+        PIExecutor.resetPlayerPage(playerName, false);
         if(playerUsed == null){
             playerUsed = new HashSet<String>();
         }

@@ -35,9 +35,10 @@ public class PortableInventory extends JavaPlugin {
         this.getCommand("pitake").setExecutor(new PITakeExecutor(this));
         this.getCommand("pisaveall").setExecutor(new PISaveAllExecutor(this));
         this.getCommand("pidisconnect").setExecutor(new PIDisconnectExecutor(this));
+        this.getCommand("pi").setExecutor(new PIExecutor(this));
         Bukkit.getPluginManager().registerEvents(new PISaveListener(), this);
         Bukkit.getPluginManager().registerEvents(new PITakeListener(), this);
-        
+        Bukkit.getPluginManager().registerEvents(new PIListener(), this);
         PIData.checkOrInitializeData();
         // 尝试调用一次文件初始化
     }

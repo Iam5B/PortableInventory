@@ -1,6 +1,6 @@
 name: PortableInventory
 main: portableinventory.PortableInventory
-version: 1.0.0
+version: 1.0.1
 api-version: 1.19
 commands:
     pitest:
@@ -47,6 +47,11 @@ commands:
         description: Submit all items in your inventory to the stockpile you are using.
         usage: /pisaveall
         permisssion: portableinventory.default
+        permission-message:
+    pi:
+        description: Combination of pisave and pitake.
+        usage: /pi
+        permission: portableinventory.default
         permission-message:
     pidisconnect:
         description: Disconnect from a stockpile that you have access to.
